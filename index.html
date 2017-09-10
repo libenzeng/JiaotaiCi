@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Swiper demo</title>
@@ -10,68 +11,129 @@
 
     <!-- Demo styles -->
     <style>
-    html, body {
-        position: relative;
-        height: 100%;
-    }
-    body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color:#000;
-        margin: 0;
-        padding: 0;
-    }
-    .swiper-container {
-        width: 100%;
-        height: 100%;
-    }
-    .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
 
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-    }
-    .swiper-container-v {
-        background: #eee;
-    }
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-container-h {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .swiper-container-v>.swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-container-v {
+            background: #eee;
+        }
+
+        
+        .swiper-container-h .swiper-slide {
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .gallery-top {
+            height: 80%;
+            width: 100%;
+        }
+
+
+        .gallery-thumbs {
+            height: 20%;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+
+        .gallery-thumbs .swiper-slide {
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        .gallery-thumbs .swiper-slide-active {
+            opacity: 1;
+        }
     </style>
 </head>
+
 <body>
     <!-- Swiper -->
-    <div class="swiper-container swiper-container-h">
+    <div class="swiper-container swiper-container-v">
         <div class="swiper-wrapper">
             <div class="swiper-slide">Horizontal Slide 1</div>
             <div class="swiper-slide">
-                <div class="swiper-container swiper-container-v">
+                <div class="swiper-container swiper-container-h gallery-top">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Vertical Slide 1</div>
-                        <div class="swiper-slide">Vertical Slide 2</div>
-                        <div class="swiper-slide">Vertical Slide 3</div>
-                        <div class="swiper-slide">Vertical Slide 4</div>
-                        <div class="swiper-slide">Vertical Slide 5</div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷6.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷7.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷9.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷10.jpg)"></div>
                     </div>
-                    <div class="swiper-pagination swiper-pagination-v"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-button-prev swiper-button-white"></div>
+                </div>
+                <div class="swiper-container swiper-container-h gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷1.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷2.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷3.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷4.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷6.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷7.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷9.jpg)"></div>
+                        <div class="swiper-slide" style="background-image:url(./image/绞胎瓷10.jpg)"></div>
+                    </div>
                 </div>
             </div>
+
             <div class="swiper-slide">Horizontal Slide 3</div>
             <div class="swiper-slide">Horizontal Slide 4</div>
         </div>
         <!-- Add Pagination -->
-        <div class="swiper-pagination swiper-pagination-h"></div>
+        <div class="swiper-pagination swiper-pagination-v"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next-v"></div>
+        <div class="swiper-button-prev-v"></div>
+
     </div>
 
     <!-- Swiper JS -->
@@ -79,17 +141,42 @@
 
     <!-- Initialize Swiper -->
     <script>
-    var swiperH = new Swiper('.swiper-container-h', {
-        pagination: '.swiper-pagination-h',
-        paginationClickable: true,
-        spaceBetween: 50
-    });
-    var swiperV = new Swiper('.swiper-container-v', {
-        pagination: '.swiper-pagination-v',
-        paginationClickable: true,
-        direction: 'vertical',
-        spaceBetween: 50
-    });
+        // var swiperH = new Swiper('.swiper-container-h', {
+        //     pagination: '.swiper-pagination-h',
+        //     paginationClickable: true,
+        //     nextButton: '.swiper-button-next',
+        //     prevButton: '.swiper-button-prev',
+        //     spaceBetween: 50,
+        //     loop: true,
+        //     autoplay: 2000
+        // });
+        var swiperV = new Swiper('.swiper-container-v', {
+            pagination: '.swiper-pagination-v',
+            paginationClickable: true,
+            direction: 'vertical',
+            nextButton: '.swiper-button-next-v',
+            prevButton: '.swiper-button-prev-v',
+            spaceBetween: 50
+        });
+
+        var galleryTop = new Swiper('.gallery-top', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 10,
+            loop: true,
+            loopedSlides: 5, //looped slides should be the same     
+        });
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            touchRatio: 0.2,
+            loop: true,
+            loopedSlides: 5, //looped slides should be the same
+            slideToClickedSlide: true
+        });
+        galleryTop.params.control = galleryThumbs;
+        galleryThumbs.params.control = galleryTop;
     </script>
 </body>
+
 </html>
